@@ -1,15 +1,13 @@
 import React from 'react'
-import NavBar from './NavBar'
-// import Hero from './Hero'
-import Skarlet from './skarlet'
+import Hero from './Hero'
 
 
 function Main() {
   return (
-    <div className='gradient-bg border h-screen overflow-y-hidden  '>
+    <div className=' h-screen overflow-y-hidden  '>
        <div>
-        <NavBar logo="/images/frost logo.svg"/>
-        <Skarlet />
+        
+        <Hero />
       </div>
     </div>
     

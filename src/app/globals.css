@@ -31,7 +31,7 @@ body {
   width: 100%; /* Full width */
 }
 
-.red- gradient-bg {
+.red-gradient-bg {
   background: linear-gradient(
     180deg, /* 180 degrees for a vertical gradient */
     #670404 0%, /* Start color */
@@ -40,4 +40,24 @@ body {
   );
   height: 100vh; /* Full viewport height */
   width: 100%; /* Full width */
+}
+
+.yellow-gradient-bg {
+  background: linear-gradient(
+    180deg, 
+    #625906 0%, 
+    #A1A40C 100%
+  );
+  height: 100vh; 
+  width: 100%; 
+}
+
+.blue-gradient-bg {
+  background: linear-gradient(
+    180deg, 
+    #040A44 0%, 
+    #1731B7 100%
+  );
+  height: 100vh; 
+  width: 100%; 
 }
