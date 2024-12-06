@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
 
@@ -21,7 +22,7 @@ const SpinMotion: React.FC<SpinMotionProps> = ({
       rotate: 0,
       scale: 1 
     }}
-    viewport={{ once: true }}
+    viewport={{ once: false }}
     transition={{ 
       type: "spring",
       stiffness: 120,

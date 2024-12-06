@@ -11,6 +11,7 @@ import frost from "@public/images/Frost.svg"
 import skarlet from "@public/images/Skarlet.svg"
 import shangT from "@public/images/Shang Tsung.svg"
 import kitana from "@public/images/Kitana 1.svg"
+import SpinMotion from './SpinMotion'
 
 const characters = [
   { 
@@ -19,6 +20,7 @@ const characters = [
     gradient: 'gradient-bg',
     logo: "/images/frost logo.svg",
     color: '#0F92F0',
+    width:480,
     textColor: 'text-white',
     hoverColor: 'hover:bg-[#0C78C2]'
   },
@@ -28,6 +30,7 @@ const characters = [
     gradient: 'red-gradient-bg',
     logo: "/images/red logo.svg",
     color: '#A72424',
+    width:550,
     textColor: 'text-white',
     hoverColor: 'hover:bg-[#8E1E1E]'
   },
@@ -37,6 +40,7 @@ const characters = [
     gradient: 'yellow-gradient-bg',
     logo: "/images/yellow logo.svg",
     color: '#C7BA44',
+    width:510,
     textColor: 'text-white',
     hoverColor: 'hover:bg-[#AFA23A]'
   },
@@ -46,6 +50,7 @@ const characters = [
     gradient: 'blue-gradient-bg',
     logo: "/images/blue logo.svg",
     color: '#0F92F0',
+    width:450,
     textColor: 'text-white',
     hoverColor: 'hover:bg-[#0C78C2]'
   }
@@ -80,7 +85,8 @@ export default function Hero() {
             transition={{ 
               type: 'spring', 
               stiffness: 300, 
-              damping: 30 
+              damping: 30,
+              duration:50
             }}
             className={`absolute inset-0 ${char.gradient} h-screen`}
           >
@@ -89,13 +95,13 @@ export default function Hero() {
               <Image 
                 src={char.image} 
                 alt={char.name} 
-                width={480} 
+                width={char.width} 
                 height={539} 
                 className='absolute z-[2]'
               />
-              <p className={`text-[200px] ${char.textColor} text-center font-extrabold`}>
+              <SpinMotion><p className={`text-[200px] ${char.textColor} text-center font-extrabold`}>
                 {char.name}
-              </p>
+              </p></SpinMotion>
               <div className='flex justify-between w-full max-w-[400px] lg:max-w-[1000px]'>
                 <div 
                   className={`w-[40px] h-[40px] rounded-full bg-[${char.color}] ${char.hoverColor} active:opacity-55 flex items-center justify-center`} 

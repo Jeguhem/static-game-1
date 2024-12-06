@@ -11,7 +11,7 @@ import chevronright from "@public/images/chevron right.svg"
 import SpinMotion from './SpinMotion'
 
 
-function Hero() {
+function HeroDefault() {
 
   const handleClick = (value:number) =>{
     console.log(value)
@@ -78,4 +78,4 @@ function Hero() {
   )
 }
 
-export default Hero
+export default HeroDefault
