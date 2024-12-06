@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-// import frostlogo from "../../../public/images/frost logo.svg"
-import chevrondown from "../../../public/images/chevron down.svg"
+// import frostlogo from "@public/images/frost logo.svg"
+import chevrondown from "@public/images/chevron down.svg"
 
 interface NavBarProps {
   logo:string

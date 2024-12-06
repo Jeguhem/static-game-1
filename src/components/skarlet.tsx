@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import skarlet from "../../../public/images/Skarlet.svg"
+import skarlet from "@public/images/Skarlet.svg"
 
 function Skarlet() {
   return (

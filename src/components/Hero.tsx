@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import frost from "../../../public/images/Frost.svg"
+import frost from "@public/images/Frost.svg"
 
 function Hero() {
   return (
