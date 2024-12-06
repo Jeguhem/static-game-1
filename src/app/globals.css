@@ -31,12 +31,12 @@ body {
   width: 100%; /* Full width */
 }
 
-.gradient-bg {
+.red- gradient-bg {
   background: linear-gradient(
     180deg, /* 180 degrees for a vertical gradient */
-    #6704040%, /* Start color */
-    #1D0551 0%, /* Middle color */
-    #0B6CB2 87% /* End color */
+    #670404 0%, /* Start color */
+    #3B0404 0%, /* Middle color */
+    #890808 87% /* End color */
   );
   height: 100vh; /* Full viewport height */
   width: 100%; /* Full width */
