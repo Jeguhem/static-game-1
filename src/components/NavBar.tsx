@@ -90,10 +90,10 @@ function NavBar({ logo }: NavBarProps) {
       {/* Navigation links */}
       <div className="flex gap-7 items-center text-[12px] font-extrabold cursor-pointer">
         <div>
-          <p onClick={handleClose}>Game</p>
+          <p onClick={handleNav}>Game</p>
         </div>
         <div>
-          <p onClick={handleClose}>Contact</p>
+          <p onClick={handleNav}>Contact</p>
         </div>
         <div className="relative flex items-center gap-2">
           {/* Dropdown trigger */}
@@ -103,17 +103,11 @@ function NavBar({ logo }: NavBarProps) {
           {/* Dropdown menu */}
           {open && (
             <div
-              className="absolute right-0 mt-2 bg-white bg-opacity-90 text-black shadow-lg rounded-lg p-2 min-w-[150px] backdrop-blur-md"
+              className="absolute right-0 mt-20 bg-white bg-opacity-90 text-black shadow-lg rounded-lg p-2 min-w-[150px] backdrop-blur-md"
               onMouseLeave={handleClose}
             >
               <div className="hover:text-blue-500 font-semibold py-1 px-2 cursor-pointer">
                 Coming Soon
-              </div>
-              <div className="hover:text-blue-500 font-semibold py-1 px-2 cursor-pointer">
-                About Us
-              </div>
-              <div className="hover:text-blue-500 font-semibold py-1 px-2 cursor-pointer">
-                Careers
               </div>
             </div>
           )}
