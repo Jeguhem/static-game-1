@@ -1,17 +1,16 @@
-import React from 'react'
-import Hero from './Hero'
-
+import React from "react";
+import Hero from "./Hero";
+import HeroMobile from "./HeroMobile";
 
 function Main() {
   return (
-    <div className=' h-screen overflow-y-hidden  '>
-       <div>
-        
+    <div className=" lg:h-screen overflow-y-hidden  ">
+      <div>
         <Hero />
+        <HeroMobile />
       </div>
     </div>
-    
-  )
+  );
 }
 
-export default Main
+export default Main;

@@ -20,8 +20,8 @@ const characters = [
     gradient: "gradient-bg",
     logo: "/images/frost logo.svg",
     color: "bg-[#0F92F0]",
-    width: 480,
-    height: 650,
+    width: 380, // Reduced for mobile
+    height: 480, // Reduced for mobile
     textColor: "text-white",
     hoverColor: "hover:bg-[#0C78C2]",
   },
@@ -31,8 +31,8 @@ const characters = [
     gradient: "red-gradient-bg",
     logo: "/images/red logo.svg",
     color: "bg-[#A72424]",
-    width: 710,
-    height: 650,
+    width: 520, // Reduced for mobile
+    height: 680, // Reduced for mobile
     textColor: "text-white",
     hoverColor: "hover:bg-[#8E1E1E]",
   },
@@ -42,8 +42,8 @@ const characters = [
     gradient: "yellow-gradient-bg",
     logo: "/images/yellow logo.svg",
     color: "bg-[#C7BA44]",
-    width: 560,
-    height: 650,
+    width: 480, // Reduced for mobile
+    height: 380, // Reduced for mobile
     textColor: "text-white",
     hoverColor: "hover:bg-[#AFA23A]",
   },
@@ -53,14 +53,14 @@ const characters = [
     gradient: "blue-gradient-bg",
     logo: "/images/blue logo.svg",
     color: "bg-[#0F92F0]",
-    width: 540,
-    height: 650,
+    width: 4860, // Reduced for mobile
+    height: 480, // Reduced for mobile
     textColor: "text-white",
     hoverColor: "hover:bg-[#0C78C2]",
   },
 ];
 
-export default function Hero() {
+export default function HeroMobile() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -74,7 +74,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative hidden lg:block h-[100vh] lg:h-screen overflow-hidden">
+    <div className="block lg:hidden relative h-[100dvh] overflow-hidden">
       <AnimatePresence>
         {characters.map((char, index) => (
           <motion.div
@@ -101,38 +101,55 @@ export default function Hero() {
             className={`absolute inset-0 ${char.gradient} h-screen`}
           >
             <NavBar logo={char.logo} />
-            <div className="relative flex flex-col items-center">
-              <Image
-                src={char.image}
-                alt={char.name}
-                width={char.width}
-                height={char.height}
-                className="absolute z-[2]"
-              />
-              <SpinMotion>
-                <p
-                  className={`lg:text-[200px] text-[100px] ${char.textColor} text-center font-extrabold`}
-                >
-                  {char.name}
-                </p>
-              </SpinMotion>
-              <div className="flex z-50 justify-between mx-4 w-full lg:max-w-[1000px]">
-                <div
-                  className={`w-[40px] h-[40px] rounded-full ${char.color} ${char.hoverColor} active:opacity-55 flex items-center justify-center`}
-                  onClick={handlePrev}
-                >
-                  <Image
-                    src={chevronLeft}
-                    alt="Previous"
-                    width={10}
-                    height={10}
-                  />
+            <div className="relative flex flex-col h-full">
+              <div className="flex-grow flex flex-col mt-[200px] items-center">
+                <div className="">
+                  {" "}
+                  {/* Adjust this percentage as needed */}
+                  <SpinMotion>
+                    <p
+                      className={`text-[60px] ${char.textColor} text-center font-extrabold`}
+                    >
+                      {char.name}
+                    </p>
+                  </SpinMotion>
                 </div>
-                <div
-                  className={`w-[40px] h-[40px] rounded-full ${char.color} ${char.hoverColor} active:opacity-55 flex items-center justify-center`}
-                  onClick={handleNext}
-                >
-                  <Image src={chevronRight} alt="Next" width={10} height={10} />
+              </div>
+
+              <div className="absolute bottom-32 left-0 right-0 flex justify-center">
+                <Image
+                  src={char.image}
+                  alt={char.name}
+                  width={char.width}
+                  height={char.height}
+                  className="z-[2] object-contain"
+                />
+              </div>
+
+              <div className="absolute mt-[300px] flex z-50 mx-8 justify-center ml-[200px] w-full  transform -translate-x-1/2">
+                <div className="flex justify-between w-full max-w-[350px]">
+                  <div
+                    className={`w-[40px] h-[40px] rounded-full ${char.color} ${char.hoverColor} active:opacity-55 flex items-center justify-center`}
+                    onClick={handlePrev}
+                  >
+                    <Image
+                      src={chevronLeft}
+                      alt="Previous"
+                      width={10}
+                      height={10}
+                    />
+                  </div>
+                  <div
+                    className={`w-[40px] h-[40px] rounded-full ${char.color} ${char.hoverColor} active:opacity-55 flex items-center justify-center`}
+                    onClick={handleNext}
+                  >
+                    <Image
+                      src={chevronRight}
+                      alt="Next"
+                      width={10}
+                      height={10}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
